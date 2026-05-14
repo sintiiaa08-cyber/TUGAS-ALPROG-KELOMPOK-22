@@ -149,29 +149,13 @@ rand        = "0.8"
 
 ---
 
-# 🚀 Installation & Execution
-
-## 1️⃣ Clone Repository
-
-```bash
-git clone https://github.com/sintiiaa08-cyber/TUGAS-ALPROG-KELOMPOK-22.git
-```
-
----
-
-## 2️⃣ Open Project Directory
-
-```bash
-cd TUGAS-ALPROG-KELOMPOK-22
-```
-
----
-
-## 3️⃣ Run Application
+# 🚀 Build & Run
 
 ```bash
 cargo run
 ```
+
+The application will automatically launch the GUI simulation window.
 
 ---
 
