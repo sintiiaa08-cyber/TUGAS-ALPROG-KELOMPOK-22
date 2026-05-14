@@ -247,12 +247,3 @@ This project is suitable for:
 - SIS/BPCS architecture studies
 - Rust GUI development practice
 
----
-
-# 📚 References
-
-1. eframe & egui Documentation  
-2. egui_extras Documentation  
-3. Rust rand Crate Documentation  
-4. IEC 61511 Functional Safety Standard  
-5. Bela G. Liptak — Instrument Engineers’ Handbook
