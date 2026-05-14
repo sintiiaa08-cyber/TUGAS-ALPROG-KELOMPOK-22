@@ -1,0 +1,10 @@
+[package]
+name = "Simulation_Feed_Water_Tank"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+eframe = "0.28.1"
+egui_extras = { version = "0.28.1", features = ["all_loaders"] }
+image = { version = "0.24", features = ["png"] }
+rand = "0.8" 
