@@ -1,13 +1,30 @@
-# 💻 TUGAS-ALPROG-KELOMPOK-22
+<div align="center">
 
-Simulation Feed Water Tank Monitoring & Control System Berbasis GUI dengan Integrasi BPCS dan SIS
+# 💧 Simulation Feed Water Tank Monitoring & Control System
+
+### GUI-Based Industrial Process Simulation with BPCS and SIS Integration
+
+<br>
+
+<img src="https://img.shields.io/badge/Language-Rust-orange?style=for-the-badge&logo=rust">
+<img src="https://img.shields.io/badge/Framework-egui%20%2F%20eframe-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/System-BPCS%20%2B%20SIS-success?style=for-the-badge">
+<img src="https://img.shields.io/badge/Status-Operational-success?style=for-the-badge">
+
+<br><br>
+
+Industrial process simulation project developed using **Rust** with real-time GUI visualization, signal processing, proportional control, and safety interlock implementation based on industrial automation principles.
+
+</div>
 
 ---
 
-## 👩‍💻 Prepared by
+# 👨‍💻 Authors
 
-- Fauzi Abdul Rozaq (2042241017)
-- Sintia Ompusunggu (2042241113)
+| Name | Student ID |
+|---|---|
+| Fauzi Abdul Rozaq | 2042241017 |
+| Sintia Ompusunggu | 2042241113 |
 
 Department of Instrumentation Engineering  
 Institut Teknologi Sepuluh Nopember (ITS)
@@ -16,21 +33,22 @@ Institut Teknologi Sepuluh Nopember (ITS)
 
 # 📘 Project Overview
 
-This project presents the development of a graphical simulation system for monitoring and controlling a Feed Water Tank (FWT) using the Rust programming language.
+This project presents the development of a **Feed Water Tank (FWT)** monitoring and control simulation system designed to emulate an industrial boiler feed water process environment.
 
-The system integrates:
+The application integrates:
 
-- Basic Process Control System (BPCS)
-- Safety Instrumented System (SIS)
-- Real-time GUI visualization
-- Moving Average signal filtering
+- **Basic Process Control System (BPCS)**
+- **Safety Instrumented System (SIS)**
+- Real-time process monitoring
+- Signal filtering and noise simulation
 - Industrial safety interlock logic
+- GUI visualization based on P&ID layout
 
-The application is designed to simulate industrial boiler feed water monitoring systems using modern GUI architecture based on `eframe` and `egui`.
+The system is implemented using the Rust programming language with the `eframe` and `egui` GUI framework, providing responsive immediate-mode rendering suitable for real-time industrial simulation.
 
 ---
 
-# 🧩 System Architecture
+# 🏗️ System Architecture
 
 ```text
 ┌──────────────────────────────┐
@@ -65,17 +83,27 @@ The application is designed to simulate industrial boiler feed water monitoring 
 
 ---
 
-# ⚙️ Features
+# ✨ Main Features
 
-✔ Real-time GUI visualization  
-✔ Industrial P&ID background  
-✔ Moving Average sensor filtering  
-✔ Random noise simulation  
-✔ Proportional BPCS control  
-✔ SIS interlock protection  
-✔ Overflow prevention  
-✔ Dry-run pump protection  
-✔ Immediate-mode rendering system
+### 🎛️ Real-Time Industrial GUI
+- Interactive operator interface
+- P&ID-based visualization
+- Immediate-mode rendering architecture
+
+### 📊 Signal Processing
+- Random sensor noise simulation
+- Moving Average filtering
+- Stable process variable visualization
+
+### ⚙️ BPCS Control System
+- Proportional level controller
+- Continuous setpoint regulation
+- Real-time corrective response
+
+### 🛡️ SIS Protection System
+- Overflow prevention mechanism
+- Dry-run pump protection
+- Independent safety interlock logic
 
 ---
 
@@ -85,13 +113,13 @@ The application is designed to simulate industrial boiler feed water monitoring 
 |---|---|
 | Programming Language | Rust |
 | GUI Framework | eframe / egui |
-| Image Loader | egui_extras |
-| Random Generator | rand |
-| Image Decoder | image crate |
+| Image Rendering | egui_extras |
+| Signal Noise Generator | rand |
+| PNG Decoder | image crate |
 
 ---
 
-# 📁 Project Directory Structure
+# 📂 Project Structure
 
 ```text
 Simulation_Feed_Water_Tank/
@@ -109,7 +137,7 @@ Simulation_Feed_Water_Tank/
 
 ---
 
-# 🛠️ Dependencies
+# 📦 Dependencies
 
 ```toml
 [dependencies]
@@ -121,7 +149,7 @@ rand        = "0.8"
 
 ---
 
-# ▶️ Running the Application
+# 🚀 Installation & Execution
 
 ## 1️⃣ Clone Repository
 
@@ -131,7 +159,7 @@ git clone https://github.com/sintiiaa08-cyber/TUGAS-ALPROG-KELOMPOK-22.git
 
 ---
 
-## 2️⃣ Enter Project Directory
+## 2️⃣ Open Project Directory
 
 ```bash
 cd TUGAS-ALPROG-KELOMPOK-22
@@ -149,15 +177,15 @@ cargo run
 
 # 🎮 System Operation
 
-## A. Normal Operation
+## Normal Operating Mode
 
-- Operator adjusts tank level using slider
-- Sensor signal is processed through:
-  - Random noise generator
-  - Moving Average filter
-- BPCS maintains level near setpoint
+The operator adjusts the tank level using a slider interface.  
+The signal is processed through:
 
-Default Setpoint:
+- Random noise generation
+- Moving Average filtering
+
+The BPCS continuously regulates the process toward the default setpoint:
 
 ```text
 SP = 50%
@@ -165,79 +193,90 @@ SP = 50%
 
 ---
 
-## B. SIS Protection Logic
+# 🚨 SIS Safety Protection
 
-### Overflow Protection
+## Overflow Protection
 
-If:
+Condition:
 
 ```text
 PV ≥ 90%
 ```
 
-Then:
-
+Action:
 - Inlet SDV closes automatically
 
 ---
 
-### Dry Run Protection
+## Dry Run Protection
 
-If:
+Condition:
 
 ```text
 PV ≤ 10%
 ```
 
-Then:
-
+Action:
 - Outlet SDV closes
 - Pump shuts down automatically
 
 ---
 
-# 📊 Signal Processing
-
-Moving Average Equation:
+# 📈 Signal Processing Equation
 
 ```text
 PV_filtered = (1/N) Σ(x_raw + η)
 ```
 
-Where:
-
-- N = 5 samples
-- x_raw = operator input
-- η = random noise
+| Symbol | Description |
+|---|---|
+| N | Number of samples |
+| x_raw | Raw operator input |
+| η | Random noise |
 
 ---
 
-# 🧠 Control Algorithm
-
-BPCS proportional controller:
+# 🧠 BPCS Control Equation
 
 ```text
 CV_BPCS = Kp × (SP − PV_filtered)
 ```
 
-Where:
-
-- Kp = 1.5
-- SP = 50%
-
----
-
-# 🏁 Project Status
-
-✔ Fully operational  
-✔ Real-time GUI simulation working  
-✔ Stable SIS interlock implementation  
-✔ Ready for academic presentation  
-✔ Suitable for industrial automation learning
+| Parameter | Value |
+|---|---|
+| Kp | 1.5 |
+| SP | 50% |
 
 ---
 
-# 🎓 Application Context
+# 🖥️ GUI Components
+
+The graphical interface includes:
+
+- Feed Water Tank visualization
+- Inlet SDV indicator
+- Outlet SDV indicator
+- Pump status indicator
+- Process Variable (PV) display
+- Setpoint display
+- Level Transmitter (LT)
+- Industrial P&ID background
+
+---
+
+# 📊 Project Status
+
+| Category | Status |
+|---|---|
+| GUI Rendering | ✅ Operational |
+| Signal Processing | ✅ Operational |
+| BPCS Logic | ✅ Operational |
+| SIS Interlock | ✅ Operational |
+| Academic Presentation | ✅ Ready |
+
+---
+
+# 🎓 Educational Context
 
 This project is suitable for:
 
@@ -247,3 +286,13 @@ This project is suitable for:
 - SIS/BPCS architecture studies
 - Rust GUI development practice
 
+---
+
+<div align="center">
+
+### Developed for the Algorithm Programming Course
+
+Department of Instrumentation Engineering  
+Institut Teknologi Sepuluh Nopember (ITS)
+
+</div>
