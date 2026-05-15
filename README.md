@@ -23,7 +23,7 @@ Industrial process simulation project developed using **Rust** with real-time GU
 
 | Name | Student ID |
 |---|---|
-| Fauzi Abdul Rozaq | 2042241017 |
+| Ahmad Fauzi Abdul Razzaq | 2042241017 |
 | Sintia Ompusunggu | 2042241113 |
 
 Department of Instrumentation Engineering  
