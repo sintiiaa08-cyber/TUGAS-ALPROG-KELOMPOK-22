@@ -116,25 +116,6 @@ The system is implemented using the Rust programming language with the `eframe` 
 | Image Rendering | egui_extras |
 | Signal Noise Generator | rand |
 | PNG Decoder | image crate |
-
----
-
-# 📂 Project Structure
-
-```text
-Simulation_Feed_Water_Tank/
-│
-├── src/
-│   └── main.rs
-│
-├── assets/
-│   └── background.png
-│
-├── Cargo.toml
-├── Cargo.lock
-└── README.md
-```
-
 ---
 
 # 📂 Project Structure
