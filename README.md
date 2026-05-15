@@ -227,13 +227,14 @@ PV_filtered = (1/N) Σ(x_raw + η)
 # 🧠 BPCS Control Equation
 
 ```text
-CV_BPCS = Kp × (SP − PV_filtered)
+CV_BPCS = Bias + (Kp × (SP − PV_filtered))
 ```
 
 | Parameter | Value |
 |---|---|
-| Kp | 1.5 |
+| Kp | 18.75 |
 | SP | 50% |
+| Bias | 750 |
 
 ---
 
