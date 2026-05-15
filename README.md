@@ -137,16 +137,21 @@ Simulation_Feed_Water_Tank/
 
 ---
 
-# 📦 Dependencies
+# 📂 Project Structure
 
-```toml
-[dependencies]
-eframe      = "0.28.1"
-egui_extras = { version = "0.28.1", features = ["all_loaders"] }
-image       = { version = "0.24", features = ["png"] }
-rand        = "0.8"
+```text
+feed_water_tank/
+│
+├── src/
+│   └── main.rs
+│
+├── target/
+│
+├── .gitignore
+├── Cargo.toml
+├── Cargo.lock
+└── README.md
 ```
-
 ---
 
 # 🚀 Build & Run
