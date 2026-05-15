@@ -41,6 +41,18 @@ This project presents the development of a **Feed Water Tank (FWT)** monitoring 
   <em>Feed Water Tank Simulation Interface</em>
 </p>
 
+<p align="center">
+  <img src="Flowchart/Flowchart%20Program.png" alt="Flowchart Program" width="600px">
+  <br>
+  <em>Flowchart Program</em>
+</p>
+
+<p align="center">
+  <img src="Flowchart/Flowchart%20BPCS%20%26%20SIS.png" alt="Flowchart BPCS & SIS" width="600px">
+  <br>
+  <em>Flowchart BPCS & SIS</em>
+</p>
+
 The application integrates:
 
 - **Basic Process Control System (BPCS)**
