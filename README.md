@@ -35,6 +35,12 @@ Institut Teknologi Sepuluh Nopember (ITS)
 
 This project presents the development of a **Feed Water Tank (FWT)** monitoring and control simulation system designed to emulate an industrial boiler feed water process environment.
 
+<p align="center">
+  <img src="GUI.png" alt="GUI Simulation" width="600px">
+  <br>
+  <em>Tampilan Antarmuka Simulasi Feed Water Tank</em>
+</p>
+
 The application integrates:
 
 - **Basic Process Control System (BPCS)**
