@@ -72,30 +72,30 @@ The system is implemented using the Rust programming language with the `eframe` 
 <pre>
 ┌──────────────────────────────┐
 │        Operator GUI          │
-│    (Rust + eframe + egui)    │
+│  (Rust + eframe + egui)      │
 └──────────────┬───────────────┘
                │
                ▼
 ┌──────────────────────────────┐
-│   Signal Processing Layer    │
+│     Signal Processing Layer  │
 │ Noise Generator + MA Filter  │
 └──────────────┬───────────────┘
                │
                ▼
 ┌──────────────────────────────┐
-│            BPCS              │
+│             BPCS             │
 │ Proportional Level Control   │
 └──────────────┬───────────────┘
                │
                ▼
 ┌──────────────────────────────┐
-│             SIS              │
+│              SIS             │
 │ Safety Interlock Protection  │
 └──────────────┬───────────────┘
                │
                ▼
 ┌──────────────────────────────┐
-│    Feed Water Tank Process   │
+│  Feed Water Tank Process     │
 │ (SDV + Pump + LT Simulation) │
 └──────────────────────────────┘
 </pre>
