@@ -68,24 +68,45 @@ The system is implemented using the Rust programming language with the `eframe` 
 
 # 🏗️ System Architecture
 
-graph TD
-    A["<b>Operator GUI</b><br>(Rust + eframe + egui)"] 
-    B["<b>Signal Processing Layer</b><br>Noise Generator + MA Filter"]
-    C["<b>BPCS</b><br>Proportional Level Control"]
-    D["<b>SIS</b><br>Safety Interlock Protection"]
-    E["<b>Feed Water Tank Process</b><br>(SDV + Pump + LT Simulation)"]
+<div align="center">
+<table>
+<tr>
+<td>
+<pre>
+┌──────────────────────────────┐
+│        Operator GUI          │
+│  (Rust + eframe + egui)      │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│     Signal Processing Layer  │
+│ Noise Generator + MA Filter  │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│             BPCS             │
+│ Proportional Level Control   │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│              SIS             │
+│ Safety Interlock Protection  │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│  Feed Water Tank Process     │
+│ (SDV + Pump + LT Simulation) │
+└──────────────────────────────┘
+</pre>
+</td>
+</tr>
+</table>
+</div>
 
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-
-    %% Penyesuaian warna agar terlihat seperti blok kode gelap %%
-    style A fill:#1f2328,stroke:#d0d7de,color:#fff
-    style B fill:#1f2328,stroke:#d0d7de,color:#fff
-    style C fill:#1f2328,stroke:#d0d7de,color:#fff
-    style D fill:#1f2328,stroke:#d0d7de,color:#fff
-    style E fill:#1f2328,stroke:#d0d7de,color:#fff
 ---
 
 # ✨ Main Features
