@@ -38,7 +38,7 @@ This project presents the development of a **Feed Water Tank (FWT)** monitoring 
 <p align="center">
   <img src="GUI.png" alt="GUI Simulation" width="600px">
   <br>
-  <em>Tampilan Antarmuka Simulasi Feed Water Tank</em>
+  <em>Feed Water Tank Simulation Interface</em>
 </p>
 
 The application integrates:
